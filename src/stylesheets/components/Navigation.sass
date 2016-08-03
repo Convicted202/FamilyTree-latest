@@ -1,0 +1,52 @@
+@import '../themes/DefaultTheme.scss'
+
+.menu
+    list-style: none outside
+
+    .menu-item
+        padding: 10px
+
+
+        &:first-child a
+            border-bottom: 1px solid #797979
+
+        &:last-child
+            position: absolute;
+            bottom: 0;
+
+            a
+                border-top: 1px solid #797979;
+
+        a
+            position: relative
+            width: 100px
+            padding: 20px
+            display: inline-block
+            color: #797979
+            transition: all 0.3s
+
+            &:hover
+                color: #cacaca
+
+            &.active
+                color: #cacaca
+
+                &:after
+                    content: ""
+                    position: absolute
+                    width: 20px
+                    height: 20px
+                    right: -20px
+                    margin-top: 10px
+                    background: #f7f7f7
+                    transform: rotate(45deg)
+
+            i
+                font-size: 3em
+                line-height: 100%
+                color: inherit
+                display: inline-block
+                position: static
+                min-width: 20px
+                margin: 0 5px
+                text-align: center
